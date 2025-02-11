@@ -1,0 +1,11 @@
+.gitignore
+LICENSE
+README.md
+Dockerfile
+docker-clean.sh
+requirements-dev.txt
+.env
+*.example
+.github/
+tests/
+docs/

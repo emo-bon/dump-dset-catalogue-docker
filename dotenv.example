@@ -1,0 +1,4 @@
+# Usage:
+# Make a copy of this file to a local .env file and change settings as needed
+# ----
+# There are currently no environment variable this service will pick up on
