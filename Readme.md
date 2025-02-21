@@ -33,7 +33,7 @@ $ rocrateroot="../path_to_analysis_results_repo/crate_results_folder_X"
 $ source_mat_id="YourRefHere"
 
 # actually run it
-$ docker run --rm --name "emo-bon_ddcat" --volume ${rocrateroot}:/resultsroot ghcr.io/emo-bon/emobon_arup:${version}
+$ docker run --rm --name "emo-bon_ddcat" --volume ${rocrateroot}:/resultsroot ghcr.io/emo-bon/emobon_dcdat:${version}
 ```
 
 ## Developer info
