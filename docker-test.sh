@@ -8,7 +8,7 @@ dckr_img_nm=${2:-"emobon_ddcat:latest"}
 if [[ -f .env ]]; then
   source .env
 fi
-#create remp space if not provided from env
+#create temp space if not provided from env
 if [[ -z "${TEST_OUTPUTFOLDER}" ]]; then
   TMPDIR=$(mktemp -d) 
   TEST_OUTPUTFOLDER=${TMPDIR}
