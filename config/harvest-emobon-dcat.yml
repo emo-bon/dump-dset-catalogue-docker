@@ -11,12 +11,14 @@ assert:
       literal:
         - https://data.emobon.embrc.eu
     paths:
-      - "schema:person / schema:name"
-  - subjects:
+      - "*"
+  - subjects: # get the data from all Datasets
       SPARQL: >
         SELECT DISTINCT ?o
-        WHERE {
-              ?s dcat:dataset ?o .
-              }
+        WHERE { 
+          {?s dcat:dataset ?o . }
+          UNION
+          {?s a dcat:Dataset . }
+        }
     paths:
       - "*"

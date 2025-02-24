@@ -2,9 +2,11 @@
 
 The repository provides a dockerised executor of the sema.harvest module. This executor is used to dump the dataset catalogue from emobon.
 
-## About 
+It does so starting from https://data.emobon.embrc.eu/ and crawling the published triples to satisfy the instructions from the `config/harvest-emobon-dcat.yml`
 
-The packaged artefacts from this work are available at https://github.com/orgs/emo-bon/packages. 
+## About
+
+The packaged artefacts from this work are available at https://github.com/orgs/emo-bon/packages.
 
 ## Usage
 
@@ -14,7 +16,7 @@ To use this one only needs
    1. either a published release package
    2. or a local build
 2. to set the i/o for the process
-   1. mainly the ro-crate folder to work on (mapped as docker-volume `/resultsroot`)
+   1. mainly the folder where output (dump file) needs to be written (mapped as docker-volume `/resultsroot`)
    2. essential environment variables to pass
 3. pass all of the above in a call to `docker run`
 
@@ -29,11 +31,12 @@ $ version="latest" # or pick an available release tag from https://github.com/or
 $ docker pull ghcr.io/emo-bon/emobon_ddcat:${version}  # should pull the image without errors
 
 # variable setting to inject
-$ rocrateroot="../path_to_analysis_results_repo/crate_results_folder_X"
-$ source_mat_id="YourRefHere"
+$ out="./path_to/where/the_dump_result/should_be_written"
+# typically just use cwd
+$ out="."
 
 # actually run it
-$ docker run --rm --name "emo-bon_ddcat" --volume ${rocrateroot}:/resultsroot ghcr.io/emo-bon/emobon_dcdat:${version}
+$ docker run --rm --name "emo-bon_ddcat" --volume ${out}:/resultsroot ghcr.io/emo-bon/emobon_dcdat:${version}
 ```
 
 ## Developer info

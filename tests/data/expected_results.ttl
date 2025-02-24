@@ -1,0 +1,1343 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://example.org/travharv/ns/> .
+@prefix ns2: <https://www.w3.org/ns/dcat#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/ro-crate-metadata.json> a schema:CreativeWork ;
+    dcterms:conformsTo <https://w3id.org/ro/crate/1.1> ;
+    schema:about <https://data.emobon.embrc.eu/observatory-bpns-crate/> .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/ro-crate-metadata.json> a schema:CreativeWork ;
+    dcterms:conformsTo <https://w3id.org/ro/crate/1.1> ;
+    schema:about <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/> ;
+    schema:version "<version>" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/ro-crate-metadata.json> a schema:CreativeWork ;
+    dcterms:conformsTo <https://w3id.org/ro/crate/1.1> ;
+    schema:about <https://data.emobon.embrc.eu/observatory-nrmcb-crate/> ;
+    schema:version "<version>" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/ro-crate-metadata.json> a schema:CreativeWork ;
+    dcterms:conformsTo <https://w3id.org/ro/crate/1.1> ;
+    schema:about <https://data.emobon.embrc.eu/observatory-rformosa-crate/> ;
+    schema:version "<version>" .
+
+<https://orcid.org> a foaf:Person ;
+    foaf:mbox <mailto:emobon@embrc.eu> ;
+    foaf:name "EMO BON Secretariat" .
+
+<https://orcid.org/0000-0001-5106-6067> a foaf:Person ;
+    foaf:mbox <mailto:christina.pavloudi@embrc.eu> ;
+    foaf:name "Christina Pavloudi" .
+
+<https://orcid.org/0000-0002-0202-8256> a foaf:Person ;
+    foaf:mbox <mailto:ioulia.santi@embrc.eu> ;
+    foaf:name "Ioulia Santi" .
+
+<https://orcid.org/0000-0002-4927-979X> a foaf:Person ;
+    foaf:mbox <mailto:cymon@ualg.pt> ;
+    foaf:name "Cymon Cox" .
+
+<https://orcid.org/0000-0002-5911-1536> a foaf:Person ;
+    foaf:mbox <mailto:katrina.exter@vliz.be> ;
+    foaf:name "Katrina Exter" .
+
+<https://orcid.org/0000-0002-9648-6484> a foaf:Person ;
+    foaf:mbox <mailto:marc.portier@vliz.be> ;
+    foaf:name "Marc Portier" .
+
+<urn:travharv:93b3a992-29fc-461e-84af-883d48b211b8> a prov:Entity,
+        sh:ValidationReport ;
+    ns1:fromContext "dereference_task_emobon_config.yml"^^xsd:string ;
+    prov:generatedAtTime "2025-02-24T06:35:29.719717+00:00"^^xsd:dateTime ;
+    sh:result <urn:travharv:assertionresult-03c2cc88-77ed-445c-bae9-0d8b1f8d5224>,
+        <urn:travharv:assertionresult-104e8ab3-70e5-43de-8fc8-90bb45f818a0>,
+        <urn:travharv:assertionresult-16601199-3431-4112-aa01-784d0a90798a>,
+        <urn:travharv:assertionresult-2c3edd6a-db5a-45c1-8617-09b36e33ef94>,
+        <urn:travharv:assertionresult-32b2edf9-b70d-41cd-aabc-456458dded70>,
+        <urn:travharv:assertionresult-3a6e9b8a-0a51-47b7-94ea-cb67fc94a52f>,
+        <urn:travharv:assertionresult-55d9d95b-9506-4651-bdb2-16476552701d>,
+        <urn:travharv:assertionresult-5d2a00cc-f065-4d44-890b-e71e94935df2>,
+        <urn:travharv:assertionresult-722a0955-7b55-42f7-85cd-3ee65cf3a41b>,
+        <urn:travharv:assertionresult-7a46dbbc-7a51-48f7-8b66-aefd2460a687>,
+        <urn:travharv:assertionresult-7aedf4b2-b0a6-4521-99cf-77aec84a048b>,
+        <urn:travharv:assertionresult-7b6ef7f8-6c0d-436d-8936-99d0465202a2>,
+        <urn:travharv:assertionresult-95691781-4e5f-466a-bd1d-3ef7aee11597>,
+        <urn:travharv:assertionresult-9d187ba7-174c-4d5a-9021-1c21f1dbcca8>,
+        <urn:travharv:assertionresult-a8467e49-5584-41fb-8597-50c5c85be613>,
+        <urn:travharv:assertionresult-b324d1b9-8b1b-46a0-8250-f3bc9e6f35b2>,
+        <urn:travharv:assertionresult-c82a19f5-74e9-4175-b314-ab2a3dace14c>,
+        <urn:travharv:assertionresult-cf053717-f5d4-4df5-b881-28542508d887>,
+        <urn:travharv:assertionresult-d408f9fa-b91a-4931-a882-87217c04b47d>,
+        <urn:travharv:assertionresult-d4e25aab-6e84-4fb8-bd2b-b0ac1e3f4ef4>,
+        <urn:travharv:assertionresult-e31a510c-9592-483b-9785-e5e439321abe>,
+        <urn:travharv:assertionresult-f7f6de3a-9fdb-40bb-9bae-c24bd91fddaa>,
+        <urn:travharv:assertionresult-fb3cb5ff-a3a1-44fb-aa0c-115a9248fc37> .
+
+<https://data.emobon.embrc.eu/img/emobon_logo.png> a foaf:Image .
+
+<https://data.emobon.embrc.eu/mgf-s3-prototypey/> a dcat:Dataset,
+        schema:CreativeWork ;
+    dc:description "MetaGOflow run outputs" ;
+    dc:title "MGF S3 test repo" ;
+    schema:item <https://github.com/emo-bon/mgf-s3-prototype> .
+
+<https://data.emobon.embrc.eu/observatory-aaot-crate/> a dcat:Dataset,
+        schema:CreativeWork ;
+    dc:description "Sampling Logsheets" ;
+    dc:title "AAOT (Italy)" ;
+    schema:item <https://github.com/emo-bon/observatory-aaot-crate> .
+
+<https://data.emobon.embrc.eu/observatory-bergen-crate/> a dcat:Dataset,
+        schema:CreativeWork ;
+    dc:description "Sampling Logsheets" ;
+    dc:title "Bergen (Norway)" ;
+    schema:item <https://github.com/emo-bon/observatory-bergen-crate> .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/README.md> a schema:MediaObject ;
+    schema:encodingFormat "text/markdown" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/all-triples.ttl> a schema:MediaObject .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/data-quality-control/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/data-quality-control/dqc.csv> a schema:MediaObject ;
+    schema:encodingFormat "text/csv" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/data-quality-control/logfile> a schema:MediaObject ;
+    schema:encodingFormat "text/plain" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/data-quality-control/report.csv> a schema:MediaObject ;
+    schema:encodingFormat "text/csv" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/filtered/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/filtered/sediment_measured.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the environmental measurements from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/logsheets/filtered/sediment_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_03000033" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/filtered/sediment_observatory.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the observatory metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/logsheets/filtered/sediment_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/filtered/sediment_sampling.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the sample and event metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/logsheets/filtered/sediment_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://rs.tdwg.org/terms/Event" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/filtered/water_measured.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the environmental measurements from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/logsheets/filtered/water_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_06105011" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/filtered/water_observatory.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the observatory metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/logsheets/filtered/water_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/filtered/water_sampling.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the sample and event metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/logsheets/filtered/water_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://rs.tdwg.org/terms/Event" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/sediment_measured.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the environmental measurements from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/logsheets/sediment_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_03000033" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/sediment_observatory.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the observatory metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/logsheets/sediment_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/sediment_sampling.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the sample and event metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/logsheets/sediment_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://rs.tdwg.org/terms/Event" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/transformed/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/transformed/sediment_measured.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the environmental measurements from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/logsheets/transformed/sediment_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_03000033" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/transformed/sediment_observatory.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the observatory metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/logsheets/transformed/sediment_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/transformed/sediment_sampling.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the sample and event metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/logsheets/transformed/sediment_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://rs.tdwg.org/terms/Event" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/transformed/water_measured.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the environmental measurements from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/logsheets/transformed/water_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_06105011" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/transformed/water_observatory.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the observatory metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/logsheets/transformed/water_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/transformed/water_sampling.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the sample and event metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/logsheets/transformed/water_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://rs.tdwg.org/terms/Event" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/water_measured.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the environmental measurements from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/logsheets/water_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_06105011" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/water_observatory.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the observatory metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/logsheets/water_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint" .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/water_sampling.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the sample and event metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/logsheets/water_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://rs.tdwg.org/terms/Event" .
+
+<https://data.emobon.embrc.eu/observatory-emt21-crate/> a dcat:Dataset,
+        schema:CreativeWork ;
+    dc:description "Sampling Logsheets" ;
+    dc:title "EMT21 (Spain)" ;
+    schema:item <https://github.com/emo-bon/observatory-emt21-crate> .
+
+<https://data.emobon.embrc.eu/observatory-esc68n-crate/> a dcat:Dataset,
+        schema:CreativeWork ;
+    dc:description "Sampling Logsheets" ;
+    dc:title "ESC68N (Norway)" ;
+    schema:item <https://github.com/emo-bon/observatory-esc68n-crate> .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/.github/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/.github/workflows/workflow.yml> a schema:MediaObject ;
+    schema:encodingFormat "application/x-yaml" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/.gitignore> a schema:MediaObject ;
+    schema:encodingFormat "text/plain" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/README.md> a schema:MediaObject ;
+    schema:encodingFormat "text/markdown" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/config/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/config/workflow_properties.yml> a schema:MediaObject ;
+    schema:encodingFormat "application/x-yaml" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/data-quality-control/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/data-quality-control/dqc.csv> a schema:MediaObject ;
+    schema:encodingFormat "text/csv" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/data-quality-control/logfile> a schema:MediaObject ;
+    schema:encodingFormat "text/plain" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/data-quality-control/report.csv> a schema:MediaObject ;
+    schema:encodingFormat "text/csv" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-filtered/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-filtered/sediment_measured.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the environmental measurements from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/logsheets-filtered/sediment_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-filtered/sediment_observatory.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the observatory metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/logsheets-filtered/sediment_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-filtered/sediment_sampling.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the sample and event metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/logsheets-filtered/sediment_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://rs.tdwg.org/terms/Event",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-filtered/water_measured.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the environmental measurements from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/logsheets-filtered/water_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-filtered/water_observatory.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the observatory metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/logsheets-filtered/water_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-filtered/water_sampling.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the sample and event metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/logsheets-filtered/water_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://rs.tdwg.org/terms/Event",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-transformed/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-transformed/sediment_measured.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the environmental measurements from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/logsheets-transformed/sediment_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-transformed/sediment_observatory.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the observatory metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/logsheets-transformed/sediment_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-transformed/sediment_sampling.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the sample and event metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/logsheets-transformed/sediment_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://rs.tdwg.org/terms/Event",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-transformed/water_measured.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the environmental measurements from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/logsheets-transformed/water_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-transformed/water_observatory.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the observatory metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/logsheets-transformed/water_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-transformed/water_sampling.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the sample and event metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/logsheets-transformed/water_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://rs.tdwg.org/terms/Event",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets/sediment_measured.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the environmental measurements from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/logsheets/sediment_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets/sediment_observatory.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the observatory metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/logsheets/sediment_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets/sediment_sampling.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the sample and event metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/logsheets/sediment_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://rs.tdwg.org/terms/Event",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets/water_measured.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the environmental measurements from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/logsheets/water_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets/water_observatory.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the observatory metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/logsheets/water_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets/water_sampling.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the sample and event metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/logsheets/water_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://rs.tdwg.org/terms/Event",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-iuieilat-crate/> a dcat:Dataset,
+        schema:CreativeWork ;
+    dc:description "Sampling Logsheets" ;
+    dc:title "IUIEilat (Israel)" ;
+    schema:item <https://github.com/emo-bon/observatory-iuieilat-crate> .
+
+<https://data.emobon.embrc.eu/observatory-lmo-crate/> a dcat:Dataset,
+        schema:CreativeWork ;
+    dc:description "Sampling Logsheets" ;
+    dc:title "LMO (Sweden)" ;
+    schema:item <https://github.com/emo-bon/observatory-lmo-crate> .
+
+<https://data.emobon.embrc.eu/observatory-mbal4-crate/> a dcat:Dataset,
+        schema:CreativeWork ;
+    dc:description "Sampling Logsheets" ;
+    dc:title "MBAL4 (United Kingdom)" ;
+    schema:item <https://github.com/emo-bon/observatory-mbal4-crate> .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/.github/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/.github/workflows/workflow.yml> a schema:MediaObject ;
+    schema:encodingFormat "application/x-yaml" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/.gitignore> a schema:MediaObject ;
+    schema:encodingFormat "text/plain" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/README.md> a schema:MediaObject ;
+    schema:encodingFormat "text/markdown" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/config/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/config/workflow_properties.yml> a schema:MediaObject ;
+    schema:encodingFormat "application/x-yaml" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/data-quality-control/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/data-quality-control/dqc.csv> a schema:MediaObject ;
+    schema:encodingFormat "text/csv" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/data-quality-control/logfile> a schema:MediaObject ;
+    schema:encodingFormat "text/plain" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/data-quality-control/report.csv> a schema:MediaObject ;
+    schema:encodingFormat "text/csv" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-filtered/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-filtered/sediment_measured.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the environmental measurements from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/logsheets-filtered/sediment_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-filtered/sediment_observatory.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the observatory metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/logsheets-filtered/sediment_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-filtered/sediment_sampling.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the sample and event metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/logsheets-filtered/sediment_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://rs.tdwg.org/terms/Event",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-filtered/water_measured.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the environmental measurements from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/logsheets-filtered/water_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-filtered/water_observatory.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the observatory metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/logsheets-filtered/water_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-filtered/water_sampling.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the sample and event metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/logsheets-filtered/water_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://rs.tdwg.org/terms/Event",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-transformed/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-transformed/sediment_measured.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the environmental measurements from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/logsheets-transformed/sediment_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-transformed/sediment_observatory.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the observatory metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/logsheets-transformed/sediment_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-transformed/sediment_sampling.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the sample and event metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/logsheets-transformed/sediment_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://rs.tdwg.org/terms/Event",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-transformed/water_measured.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the environmental measurements from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/logsheets-transformed/water_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-transformed/water_observatory.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the observatory metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/logsheets-transformed/water_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-transformed/water_sampling.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the sample and event metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/logsheets-transformed/water_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://rs.tdwg.org/terms/Event",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets/sediment_measured.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the environmental measurements from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/logsheets/sediment_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets/sediment_observatory.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the observatory metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/logsheets/sediment_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets/sediment_sampling.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the sample and event metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/logsheets/sediment_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://rs.tdwg.org/terms/Event",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets/water_measured.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the environmental measurements from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/logsheets/water_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets/water_observatory.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the observatory metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/logsheets/water_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets/water_sampling.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the sample and event metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/logsheets/water_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://rs.tdwg.org/terms/Event",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-oob-crate/> a dcat:Dataset,
+        schema:CreativeWork ;
+    dc:description "Sampling Logsheets" ;
+    dc:title "OOB (France)" ;
+    schema:item <https://github.com/emo-bon/observatory-oob-crate> .
+
+<https://data.emobon.embrc.eu/observatory-osd74-crate/> a dcat:Dataset,
+        schema:CreativeWork ;
+    dc:description "Sampling Logsheets" ;
+    dc:title "OSD74 (Portugal)" ;
+    schema:item <https://github.com/emo-bon/observatory-osd74-crate> .
+
+<https://data.emobon.embrc.eu/observatory-piegetxo-crate/> a dcat:Dataset,
+        schema:CreativeWork ;
+    dc:description "Sampling Logsheets" ;
+    dc:title "PIEGetxo (Spain)" ;
+    schema:item <https://github.com/emo-bon/observatory-piegetxo-crate> .
+
+<https://data.emobon.embrc.eu/observatory-plenzia-crate/> a dcat:Dataset,
+        schema:CreativeWork ;
+    dc:description "Sampling Logsheets" ;
+    dc:title "Plenzia (Spain)" ;
+    schema:item <https://github.com/emo-bon/observatory-plenzia-crate> .
+
+<https://data.emobon.embrc.eu/observatory-profile/0.22> a schema:CreativeWork ;
+    schema:name "<name>" ;
+    schema:version "<version>" .
+
+<https://data.emobon.embrc.eu/observatory-profile/0.23> a schema:CreativeWork ;
+    schema:name "<name>" ;
+    schema:version "<version>" .
+
+<https://data.emobon.embrc.eu/observatory-profile/0.24> a schema:CreativeWork ;
+    schema:name "<name>" ;
+    schema:version "<version>" .
+
+<https://data.emobon.embrc.eu/observatory-profile/latest> a schema:CreativeWork ;
+    schema:name "<name>" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/.github/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/.github/workflows/workflow.yml> a schema:MediaObject ;
+    schema:encodingFormat "application/x-yaml" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/.gitignore> a schema:MediaObject ;
+    schema:encodingFormat "text/plain" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/README.md> a schema:MediaObject ;
+    schema:encodingFormat "text/markdown" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/config/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/config/workflow_properties.yml> a schema:MediaObject ;
+    schema:encodingFormat "application/x-yaml" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/data-quality-control/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/data-quality-control/dqc.csv> a schema:MediaObject ;
+    schema:encodingFormat "text/csv" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/data-quality-control/logfile> a schema:MediaObject ;
+    schema:encodingFormat "text/plain" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/data-quality-control/report.csv> a schema:MediaObject ;
+    schema:encodingFormat "text/csv" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-filtered/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-filtered/sediment_measured.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the environmental measurements from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/logsheets-filtered/sediment_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-filtered/sediment_observatory.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the observatory metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/logsheets-filtered/sediment_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-filtered/sediment_sampling.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the sample and event metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/logsheets-filtered/sediment_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://rs.tdwg.org/terms/Event",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-filtered/water_measured.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the environmental measurements from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/logsheets-filtered/water_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-filtered/water_observatory.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the observatory metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/logsheets-filtered/water_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-filtered/water_sampling.csv> a schema:MediaObject ;
+    schema:description "Filtered logsheet of the sample and event metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/logsheets-filtered/water_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://rs.tdwg.org/terms/Event",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-transformed/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-transformed/sediment_measured.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the environmental measurements from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/logsheets-transformed/sediment_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-transformed/sediment_observatory.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the observatory metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/logsheets-transformed/sediment_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-transformed/sediment_sampling.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the sample and event metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/logsheets-transformed/sediment_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://rs.tdwg.org/terms/Event",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-transformed/water_measured.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the environmental measurements from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/logsheets-transformed/water_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-transformed/water_observatory.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the observatory metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/logsheets-transformed/water_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-transformed/water_sampling.csv> a schema:MediaObject ;
+    schema:description "Transformed logsheet of the sample and event metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/logsheets-transformed/water_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://rs.tdwg.org/terms/Event",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets/> a schema:Dataset .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets/sediment_measured.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the environmental measurements from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/logsheets/sediment_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets/sediment_observatory.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the observatory metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/logsheets/sediment_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets/sediment_sampling.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the sample and event metadata from the sediment sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/logsheets/sediment_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_03000033",
+        "https://rs.tdwg.org/terms/Event",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets/water_measured.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the environmental measurements from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/logsheets/water_measured.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
+        "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets/water_observatory.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the observatory metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/logsheets/water_observatory.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://purl.org/dc/terms/Location",
+        "https://schema.org/ContactPoint",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets/water_sampling.csv> a schema:MediaObject ;
+    schema:description "Raw logsheet of the sample and event metadata from the water sampling events" ;
+    schema:downloadUrl "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/logsheets/water_sampling.csv" ;
+    schema:encodingFormat "text/csv" ;
+    schema:keywords "http://purl.obolibrary.org/obo/ENVO_06105011",
+        "https://rs.tdwg.org/terms/Event",
+        "metadata" .
+
+<https://data.emobon.embrc.eu/observatory-roskogo-crate/> a dcat:Dataset,
+        schema:CreativeWork ;
+    dc:description "Sampling Logsheets" ;
+    dc:title "ROSKOGO observatory" ;
+    schema:item <https://github.com/emo-bon/observatory-roskogo-crate> .
+
+<https://data.emobon.embrc.eu/observatory-umf-crate/> a dcat:Dataset,
+        schema:CreativeWork ;
+    dc:description "Sampling Logsheets" ;
+    dc:title "UMF (Sweden)" ;
+    schema:item <https://github.com/emo-bon/observatory-umf-crate> .
+
+<https://data.emobon.embrc.eu/observatory-vb-crate/> a dcat:Dataset,
+        schema:CreativeWork ;
+    dc:description "Sampling Logsheets" ;
+    dc:title "VB (France)" ;
+    schema:item <https://github.com/emo-bon/observatory-vb-crate> .
+
+<https://ror.org/0038zss60> a schema:ContactPoint ;
+    schema:email "emobon@embrc.eu" .
+
+<urn:travharv:assertionresult-03c2cc88-77ed-445c-bae9-0d8b1f8d5224> a prov:Entity,
+        sh:ValidationResult ;
+    prov:generatedAtTime "2025-02-24T06:35:36.102190+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-aaot-crate/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-104e8ab3-70e5-43de-8fc8-90bb45f818a0> a prov:Entity,
+        sh:ValidationResult ;
+    ns1:lastRetrievableResource <urn:travharv:downloadresource-f2eb1ce7-4073-4400-b4d0-55a9dec10438> ;
+    prov:generatedAtTime "2025-02-24T06:35:30.136622+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-16601199-3431-4112-aa01-784d0a90798a> a prov:Entity,
+        sh:ValidationResult ;
+    ns1:lastRetrievableResource <urn:travharv:downloadresource-9d6f4e25-d5ef-4329-8573-9d8b7a4c9b2b> ;
+    prov:generatedAtTime "2025-02-24T06:35:31.241708+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-rformosa-crate/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-2c3edd6a-db5a-45c1-8617-09b36e33ef94> a prov:Entity,
+        sh:ValidationResult ;
+    prov:generatedAtTime "2025-02-24T06:35:34.417966+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-bergen-crate/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-32b2edf9-b70d-41cd-aabc-456458dded70> a prov:Entity,
+        sh:ValidationResult ;
+    prov:generatedAtTime "2025-02-24T06:35:33.264501+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-umf-crate/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-3a6e9b8a-0a51-47b7-94ea-cb67fc94a52f> a prov:Entity,
+        sh:ValidationResult ;
+    prov:generatedAtTime "2025-02-24T06:35:34.837346+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-iuieilat-crate/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-55d9d95b-9506-4651-bdb2-16476552701d> a prov:Entity,
+        sh:ValidationResult ;
+    prov:generatedAtTime "2025-02-24T06:35:35.879268+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-profile/draft"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-5d2a00cc-f065-4d44-890b-e71e94935df2> a prov:Entity,
+        sh:ValidationResult ;
+    prov:generatedAtTime "2025-02-24T06:35:35.250795+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-plenzia-crate/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-722a0955-7b55-42f7-85cd-3ee65cf3a41b> a prov:Entity,
+        sh:ValidationResult ;
+    ns1:lastRetrievableResource <urn:travharv:downloadresource-c1c59f85-1f8a-4971-b0e7-f8b9f8c4b74d> ;
+    prov:generatedAtTime "2025-02-24T06:35:34.013195+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-bpns-crate/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-7a46dbbc-7a51-48f7-8b66-aefd2460a687> a prov:Entity,
+        sh:ValidationResult ;
+    prov:generatedAtTime "2025-02-24T06:35:32.077771+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/sequencing-profile"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-7aedf4b2-b0a6-4521-99cf-77aec84a048b> a prov:Entity,
+        sh:ValidationResult ;
+    prov:generatedAtTime "2025-02-24T06:35:35.452299+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-piegetxo-crate/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-7b6ef7f8-6c0d-436d-8936-99d0465202a2> a prov:Entity,
+        sh:ValidationResult ;
+    prov:generatedAtTime "2025-02-24T06:35:30.363172+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/mgf-s3-prototypey/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-95691781-4e5f-466a-bd1d-3ef7aee11597> a prov:Entity,
+        sh:ValidationResult ;
+    prov:generatedAtTime "2025-02-24T06:35:34.215664+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-lmo-crate/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-9d187ba7-174c-4d5a-9021-1c21f1dbcca8> a prov:Entity,
+        sh:ValidationResult ;
+    ns1:lastRetrievableResource <urn:travharv:downloadresource-7e6a5e26-190e-4c12-994f-05f98e69a239> ;
+    prov:generatedAtTime "2025-02-24T06:35:33.061997+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-hcmr-1-crate/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-a8467e49-5584-41fb-8597-50c5c85be613> a prov:Entity,
+        sh:ValidationResult ;
+    prov:generatedAtTime "2025-02-24T06:35:35.659311+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-esc68n-crate/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-b324d1b9-8b1b-46a0-8250-f3bc9e6f35b2> a prov:Entity,
+        sh:ValidationResult ;
+    prov:generatedAtTime "2025-02-24T06:35:36.308289+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-oob-crate/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-c82a19f5-74e9-4175-b314-ab2a3dace14c> a prov:Entity,
+        sh:ValidationResult ;
+    prov:generatedAtTime "2025-02-24T06:35:31.453924+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-mbal4-crate/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-cf053717-f5d4-4df5-b881-28542508d887> a prov:Entity,
+        sh:ValidationResult ;
+    prov:generatedAtTime "2025-02-24T06:35:31.663507+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-emt21-crate/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-d408f9fa-b91a-4931-a882-87217c04b47d> a prov:Entity,
+        sh:ValidationResult ;
+    prov:generatedAtTime "2025-02-24T06:35:31.874894+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-vb-crate/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-d4e25aab-6e84-4fb8-bd2b-b0ac1e3f4ef4> a prov:Entity,
+        sh:ValidationResult ;
+    prov:generatedAtTime "2025-02-24T06:35:34.629354+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-roskogo-crate/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-e31a510c-9592-483b-9785-e5e439321abe> a prov:Entity,
+        sh:ValidationResult ;
+    prov:generatedAtTime "2025-02-24T06:35:35.044734+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-osd74-crate/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-f7f6de3a-9fdb-40bb-9bae-c24bd91fddaa> a prov:Entity,
+        sh:ValidationResult ;
+    prov:generatedAtTime "2025-02-24T06:35:32.297878+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/analysis-results-profile/draft"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:assertionresult-fb3cb5ff-a3a1-44fb-aa0c-115a9248fc37> a prov:Entity,
+        sh:ValidationResult ;
+    ns1:lastRetrievableResource <urn:travharv:downloadresource-5e78d14f-99a8-4305-a7df-87573245b4f5> ;
+    prov:generatedAtTime "2025-02-24T06:35:37.109120+00:00"^^xsd:dateTime ;
+    sh:focusNode "https://data.emobon.embrc.eu/observatory-nrmcb-crate/"^^xsd:anyURI ;
+    sh:resultMessage "Assertion failed, last path: "^^xsd:string ;
+    sh:resultPath ""^^xsd:string .
+
+<urn:travharv:downloadresource-5e78d14f-99a8-4305-a7df-87573245b4f5> a void:Dataset,
+        schema:DataDownload ;
+    void:triples 206 ;
+    schema:contentUrl "https://data.emobon.embrc.eu/observatory-nrmcb-crate/"^^xsd:anyURI ;
+    schema:encodingFormat "text/turtle"^^xsd:string .
+
+<urn:travharv:downloadresource-7e6a5e26-190e-4c12-994f-05f98e69a239> a void:Dataset,
+        schema:DataDownload ;
+    void:triples 206 ;
+    schema:contentUrl "https://data.emobon.embrc.eu/observatory-hcmr-1-crate/"^^xsd:anyURI ;
+    schema:encodingFormat "text/turtle"^^xsd:string .
+
+<urn:travharv:downloadresource-9d6f4e25-d5ef-4329-8573-9d8b7a4c9b2b> a void:Dataset,
+        schema:DataDownload ;
+    void:triples 206 ;
+    schema:contentUrl "https://data.emobon.embrc.eu/observatory-rformosa-crate/"^^xsd:anyURI ;
+    schema:encodingFormat "text/turtle"^^xsd:string .
+
+<urn:travharv:downloadresource-c1c59f85-1f8a-4971-b0e7-f8b9f8c4b74d> a void:Dataset,
+        schema:DataDownload ;
+    void:triples 174 ;
+    schema:contentUrl "https://data.emobon.embrc.eu/observatory-bpns-crate/"^^xsd:anyURI ;
+    schema:encodingFormat "text/turtle"^^xsd:string .
+
+<urn:travharv:downloadresource-f2eb1ce7-4073-4400-b4d0-55a9dec10438> a void:Dataset,
+        schema:DataDownload ;
+    void:triples 159 ;
+    schema:contentUrl "https://data.emobon.embrc.eu"^^xsd:anyURI ;
+    schema:encodingFormat "text/turtle"^^xsd:string .
+
+<https://data.emobon.embrc.eu> a dcat:Catalog,
+        foaf:Project ;
+    dc:description "European Marine Omics Biodiversity Observation Network, A long-term omics observatory of marine biodiversity and ecosystems supporting policy needs and sustainable use of marine biological resources." ;
+    dc:title "European Marine Omics Biodiversity Observation Network" ;
+    dcat:dataset <https://data.emobon.embrc.eu/analysis-results-profile/draft>,
+        <https://data.emobon.embrc.eu/mgf-s3-prototypey/>,
+        <https://data.emobon.embrc.eu/observatory-aaot-crate/>,
+        <https://data.emobon.embrc.eu/observatory-bergen-crate/>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/>,
+        <https://data.emobon.embrc.eu/observatory-emt21-crate/>,
+        <https://data.emobon.embrc.eu/observatory-esc68n-crate/>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/>,
+        <https://data.emobon.embrc.eu/observatory-iuieilat-crate/>,
+        <https://data.emobon.embrc.eu/observatory-lmo-crate/>,
+        <https://data.emobon.embrc.eu/observatory-mbal4-crate/>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/>,
+        <https://data.emobon.embrc.eu/observatory-oob-crate/>,
+        <https://data.emobon.embrc.eu/observatory-osd74-crate/>,
+        <https://data.emobon.embrc.eu/observatory-piegetxo-crate/>,
+        <https://data.emobon.embrc.eu/observatory-plenzia-crate/>,
+        <https://data.emobon.embrc.eu/observatory-profile/draft>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/>,
+        <https://data.emobon.embrc.eu/observatory-roskogo-crate/>,
+        <https://data.emobon.embrc.eu/observatory-umf-crate/>,
+        <https://data.emobon.embrc.eu/observatory-vb-crate/>,
+        <https://data.emobon.embrc.eu/sequencing-profile> ;
+    foaf:homepage <https://data.emobon.embrc.eu> ;
+    foaf:logo <https://data.emobon.embrc.eu/img/emobon_logo.png> ;
+    foaf:name "emobon" ;
+    schema:mainEntityOfPage <https://data.emobon.embrc.eu> .
+
+<https://data.emobon.embrc.eu/analysis-results-profile/draft> a dcat:Dataset,
+        schema:CreativeWork ;
+    dc:description "Ro profile for analysis result crates in the emobon project." ;
+    dc:title "analysis-results-profile" ;
+    schema:item <https://data.emobon.embrc.eu/analysis-results-profile/draft> .
+
+<https://data.emobon.embrc.eu/observatory-bpns-crate/> a dcat:Dataset,
+        schema:CreativeWork,
+        schema:Dataset ;
+    dc:description "Sampling Logsheets" ;
+    dc:title "BPNS (Belgium)" ;
+    dcterms:conformsTo <https://data.emobon.embrc.eu/observatory-profile/latest> ;
+    schema:contactPoint <https://ror.org/0038zss60> ;
+    schema:datePublished "2025-02-06T14:05:17+00:00" ;
+    schema:description "This RO-Crate/GitHub repository contains the EMO BON sampling event logsheets from the observatory BPNS" ;
+    schema:hasPart <https://data.emobon.embrc.eu/observatory-bpns-crate/README.md>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/all-triples.ttl>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/data-quality-control/>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/data-quality-control/dqc.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/data-quality-control/logfile>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/data-quality-control/report.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/filtered/>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/filtered/sediment_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/filtered/sediment_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/filtered/sediment_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/filtered/water_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/filtered/water_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/filtered/water_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/sediment_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/sediment_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/sediment_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/transformed/>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/transformed/sediment_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/transformed/sediment_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/transformed/sediment_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/transformed/water_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/transformed/water_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/transformed/water_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/water_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/water_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-bpns-crate/logsheets/water_sampling.csv> ;
+    schema:item <https://github.com/emo-bon/observatory-bpns-crate> ;
+    schema:keywords "EMO BON",
+        "https://rs.tdwg.org/terms/Event",
+        "https://schema.org/Dataset",
+        "https://www.w3.org/TR/vocab-ssn/#SOSASampling" ;
+    schema:license "https://creativecommons.org/licenses/by/4.0/" ;
+    schema:publisher "https://www.embrc.eu/emo-bon" ;
+    schema:title "observatory-bpns-crate" ;
+    ns2:accessURL "https://raw.githubusercontent.com/emo-bon/observatory-bpns-crate/main/ro-crate-metadata.json" .
+
+<https://data.emobon.embrc.eu/observatory-hcmr-1-crate/> a dcat:Dataset,
+        schema:CreativeWork,
+        schema:Dataset ;
+    dc:description "Sampling Logsheets" ;
+    dc:title "HCMR-1 (Crete)" ;
+    dcterms:conformsTo <https://data.emobon.embrc.eu/observatory-profile/0.24> ;
+    schema:contactPoint [ a schema:ContactPoint ;
+            schema:email "emobon@embrc.eu" ] ;
+    schema:datePublished "2024-05-29T14:34:26+00:00" ;
+    schema:description "This RO-Crate/GitHub repository contains the EMO BON sampling event logsheets from the observatory HCMR" ;
+    schema:hasPart <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/.github/>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/.github/workflows/workflow.yml>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/.gitignore>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/README.md>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/config/>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/config/workflow_properties.yml>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/data-quality-control/>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/data-quality-control/dqc.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/data-quality-control/logfile>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/data-quality-control/report.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-filtered/>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-filtered/sediment_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-filtered/sediment_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-filtered/sediment_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-filtered/water_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-filtered/water_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-filtered/water_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-transformed/>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-transformed/sediment_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-transformed/sediment_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-transformed/sediment_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-transformed/water_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-transformed/water_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets-transformed/water_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets/>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets/sediment_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets/sediment_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets/sediment_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets/water_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets/water_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-hcmr-1-crate/logsheets/water_sampling.csv> ;
+    schema:item <https://github.com/emo-bon/observatory-hcmr-1-crate> ;
+    schema:keywords "EMO BON",
+        "https://rs.tdwg.org/terms/Event",
+        "https://schema.org/Dataset",
+        "https://www.w3.org/TR/vocab-ssn/#SOSASampling" ;
+    schema:license "https://creativecommons.org/licenses/by/4.0/" ;
+    schema:publisher "https://www.embrc.eu/emo-bon" ;
+    schema:title "observatory-hcmr-1-crate" ;
+    schema:version "<version>" ;
+    ns2:accessURL "https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/main/ro-crate-metadata.json" .
+
+<https://data.emobon.embrc.eu/observatory-nrmcb-crate/> a dcat:Dataset,
+        schema:CreativeWork,
+        schema:Dataset ;
+    dc:description "Sampling Logsheets" ;
+    dc:title "NRMCB (Italy)" ;
+    dcterms:conformsTo <https://data.emobon.embrc.eu/observatory-profile/0.23> ;
+    schema:contactPoint [ a schema:ContactPoint ;
+            schema:email "emobon@embrc.eu" ] ;
+    schema:datePublished "2024-05-29T08:49:13+00:00" ;
+    schema:description "This RO-Crate/GitHub repository contains the EMO BON sampling event logsheets from the observatory NRMCB" ;
+    schema:hasPart <https://data.emobon.embrc.eu/observatory-nrmcb-crate/.github/>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/.github/workflows/workflow.yml>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/.gitignore>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/README.md>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/config/>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/config/workflow_properties.yml>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/data-quality-control/>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/data-quality-control/dqc.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/data-quality-control/logfile>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/data-quality-control/report.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-filtered/>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-filtered/sediment_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-filtered/sediment_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-filtered/sediment_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-filtered/water_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-filtered/water_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-filtered/water_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-transformed/>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-transformed/sediment_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-transformed/sediment_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-transformed/sediment_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-transformed/water_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-transformed/water_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets-transformed/water_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets/>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets/sediment_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets/sediment_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets/sediment_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets/water_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets/water_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-nrmcb-crate/logsheets/water_sampling.csv> ;
+    schema:item <https://github.com/emo-bon/observatory-nrmcb-crate> ;
+    schema:keywords "EMO BON",
+        "https://rs.tdwg.org/terms/Event",
+        "https://schema.org/Dataset",
+        "https://www.w3.org/TR/vocab-ssn/#SOSASampling" ;
+    schema:license "https://creativecommons.org/licenses/by/4.0/" ;
+    schema:publisher "https://www.embrc.eu/emo-bon" ;
+    schema:title "observatory-nrmcb-crate" ;
+    schema:version "<version>" ;
+    ns2:accessURL "https://raw.githubusercontent.com/emo-bon/observatory-nrmcb-crate/main/ro-crate-metadata.json" .
+
+<https://data.emobon.embrc.eu/observatory-profile/draft> a dcat:Dataset,
+        schema:CreativeWork ;
+    dc:description "Ro profile for observatory crates in the emobon project." ;
+    dc:title "observatory-profile" ;
+    schema:item <https://data.emobon.embrc.eu/observatory-profile/draft> .
+
+<https://data.emobon.embrc.eu/observatory-rformosa-crate/> a dcat:Dataset,
+        schema:CreativeWork,
+        schema:Dataset ;
+    dc:description "Sampling Logsheets" ;
+    dc:title "RFormosa observatory" ;
+    dcterms:conformsTo <https://data.emobon.embrc.eu/observatory-profile/0.22> ;
+    schema:contactPoint [ a schema:ContactPoint ;
+            schema:email "emobon@embrc.eu" ] ;
+    schema:datePublished "2024-05-28T09:49:51+00:00" ;
+    schema:description "This RO-Crate/GitHub repository contains the EMO BON sampling event logsheets from the observatory RFORMOSA" ;
+    schema:hasPart <https://data.emobon.embrc.eu/observatory-rformosa-crate/.github/>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/.github/workflows/workflow.yml>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/.gitignore>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/README.md>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/config/>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/config/workflow_properties.yml>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/data-quality-control/>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/data-quality-control/dqc.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/data-quality-control/logfile>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/data-quality-control/report.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-filtered/>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-filtered/sediment_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-filtered/sediment_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-filtered/sediment_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-filtered/water_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-filtered/water_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-filtered/water_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-transformed/>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-transformed/sediment_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-transformed/sediment_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-transformed/sediment_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-transformed/water_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-transformed/water_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets-transformed/water_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets/>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets/sediment_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets/sediment_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets/sediment_sampling.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets/water_measured.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets/water_observatory.csv>,
+        <https://data.emobon.embrc.eu/observatory-rformosa-crate/logsheets/water_sampling.csv> ;
+    schema:item <https://github.com/emo-bon/observatory-rformosa-crate> ;
+    schema:keywords "EMO BON",
+        "https://rs.tdwg.org/terms/Event",
+        "https://schema.org/Dataset",
+        "https://www.w3.org/TR/vocab-ssn/#SOSASampling" ;
+    schema:license "https://creativecommons.org/licenses/by/4.0/" ;
+    schema:publisher "https://www.embrc.eu/emo-bon" ;
+    schema:title "observatory-rformosa-crate" ;
+    schema:version "<version>" ;
+    ns2:accessURL "https://raw.githubusercontent.com/emo-bon/observatory-rformosa-crate/main/ro-crate-metadata.json" .
+
+<https://data.emobon.embrc.eu/sequencing-profile> a dcat:Dataset,
+        schema:CreativeWork ;
+    dc:description "Ro profile for sequencing crates in the emobon project." ;
+    dc:title "sequencing-profile" ;
+    schema:item <https://data.emobon.embrc.eu/sequencing-profile> .
+
