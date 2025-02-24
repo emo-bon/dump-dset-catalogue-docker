@@ -4,18 +4,16 @@
 dckr_cnt_nm=${1:-"emobon_ddcat"}
 dckr_img_nm=${2:-"emobon_ddcat:latest"}
 
-#build a temp space and fill it with the content
-TMPDIR=$(mktemp -d) && echo "using TMPDIR=${TMPDIR}"
-if [ -d "${TMPDIR}" ]; then
-    explorer.exe $(cygpath -w ${TMPDIR})
-else
-    echo "Failed to create TMPDIR"
-    exit 1
+#check for .env file and use it if available
+if [[ -f .env ]]; then
+  source .env
 fi
-(cd ./tests/data/ && cp -r . ${TMPDIR})
-ls -R ${TMPDIR}
-
-
+#create temp space if not provided from env
+if [[ -z "${TEST_OUTPUTFOLDER}" ]]; then
+  TMPDIR=$(mktemp -d) 
+  TEST_OUTPUTFOLDER=${TMPDIR}
+fi
+echo "using TEST_OUTPUTFOLDER=${TEST_OUTPUTFOLDER}"
 
 #check if an image exists and build it if not
 if [[ "$(docker images -q ${dckr_img_nm} 2> /dev/null)" == "" ]]; then
@@ -23,20 +21,28 @@ if [[ "$(docker images -q ${dckr_img_nm} 2> /dev/null)" == "" ]]; then
   docker build -t ${dckr_img_nm}:latest .
 fi
 
-#run the built container
+#run the available container for output
 docker run \
+  --rm \
   --name emo-bon_${dckr_cnt_nm} \
-  --volume ${TMPDIR}:/resultsroot \
-${dckr_img_nm}
+  --volume ${TEST_OUTPUTFOLDER}:/resultsroot \
+  ${dckr_img_nm}
 
 #verify the output
-test -f ${TMPDIR}/results.ttl || (echo "mising output file" && exit 1)
+OUTFILE=${TEST_OUTPUTFOLDER}/emobon-dcat-dump.ttl
+test -f ${OUTFILE} || (echo "mising output file" && exit 1)
 ttl=$(which ttl)  # look for ttl validator
 if [[ -x "${ttl}" ]]; then
-  ${ttl} ${TMPDIR}/results.ttl || (echo "ttl validation failed" && exit 1)
+  ${ttl} ${OUTFILE} || (echo "ttl validation failed" && exit 1)
 fi
 
 #say bye and clean up
 echo "test passed, cleaning up"
-#rm -rf ${TMPDIR}
-exit 0
+if [[ -d "${TMPDIR}" ]]; then 
+  # if a tmpdir was created, remove it
+  rm -rf ${TMPDIR}
+fi
+
+#done
+echo "done"
+exit 0;

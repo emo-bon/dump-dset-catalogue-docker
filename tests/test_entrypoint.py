@@ -2,9 +2,16 @@ import tempfile
 from importlib.machinery import SourceFileLoader
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
+from logging import getLogger
 
-from rdflib import Graph
+from rdflib import Graph, URIRef
+from dotenv import load_dotenv
 from sema.commons.glob import getMatchingGlobPaths
+from datetime import datetime
+import os
+
+
+log = getLogger(__name__)
 
 
 def load_source(modname, filename):
@@ -18,29 +25,81 @@ def load_source(modname, filename):
     return module
 
 
+def unique_values_of(g: Graph, p: str) -> set:
+    return set(str(o) for o in g.objects(predicate=URIRef(p)))
+
+
+def verify_build(outdir: Path, config: Path, start_ts: float) -> None:
+    # verify results
+    resultfiles = getMatchingGlobPaths(
+        outdir, includes=["*.ttl"], makeRelative=False
+    )
+    assert len(resultfiles) == 1
+
+    # check that result file
+    rf: Path = resultfiles[0]
+    assert rf.exists()
+    assert rf.stat().st_size > 0
+    # file lastmod should be more recent then the start_ts
+    assert rf.stat().st_mtime > start_ts
+
+    # non zero output is there, lets parse ...
+    g: Graph = Graph().parse(str(rf), format="ttl")
+
+    # result parses as ttl, lets do some extra tests ...
+    # 1. we expect at least csv and ttl files to be declared
+    found_enc = unique_values_of(g, "https://schema.org/encodingFormat")
+    log.debug(f"{found_enc=}")
+    expected_encodings = {"text/turtle", "text/csv"}
+    assert found_enc >= expected_encodings
+    # 2. we expect at least some conformity-declarations
+    found_conf = unique_values_of(g, "http://purl.org/dc/terms/conformsTo")
+    log.debug(f"{found_conf=}")
+    expected_encodings = {
+        "https://w3id.org/ro/crate/1.1",
+        "https://data.emobon.embrc.eu/observatory-profile/latest",
+    }
+    assert found_conf >= expected_encodings
+
+    # todo more assertions to make sure we have decent dcat entries
+    # also: we have a tests/data/*results.ttl on board to compare with
+    # but are not actively doing so
+    # unsure if we should (as exact content may change over time)
+    # but at least some extra content-checks could be made
+    # - minimum number of datasets?
+    # - conformity of datasets to profiles? --> at least have all profiles?
+    # - ...
+
+
 def test_cli():
     entrypoint = load_source("entrypoint", "entrypoint.py")
-    assert entrypoint._main
-    root = Path(entrypoint.__file__).parent
+    mainfn: callable = entrypoint._main
+    assert mainfn
+    root = Path(entrypoint.__file__).parent.absolute()
+    config = root / "config/harvest-emobon-dcat.yml"
 
-    def build_and_verify(outdir: Path) -> None:
-        entrypoint._main(
-            resultsroot=root / "tests/data",
-            config=root / "tests/data/dereference_task_emobon_config.yml",
+    def build_and_verify(outdir: str | Path):
+        outdir = Path(outdir)  # ensure Path type
+        ts: float = datetime.now().timestamp()
+        mainfn(
+            resultsroot=outdir,
+            config=config,
         )
-        # verify results
-        resultfiles = getMatchingGlobPaths(
-            root / "tests/data", includes=["*.ttl"], makeRelative=False
-        )
-        assert len(resultfiles) == 1
-        # try parsing the ttl files too
-        for rf in resultfiles:
-            assert rf.exists()
-            assert rf.stat().st_size > 0
-            Graph().parse(str(rf), format="ttl")
+        verify_build(outdir, config, ts)
 
-    # tmpdir = Path("/tmp/test_ddat")
-    # tmpdir.mkdir(exist_ok=True, parents=True)
-    # build_and_verify(tmpdir)
-    with tempfile.TemporaryDirectory() as tmpdir:
-        build_and_verify(Path(tmpdir))
+    load_dotenv()
+    tmpdir = os.getenv("TEST_OUTFOLDER")
+    if tmpdir:
+        tmpdir = Path(tmpdir)
+        log.info(
+            f"Configured outfolder {tmpdir=} "
+            "allows the output to be manually verified.")
+        tmpdir.mkdir(exist_ok=True, parents=True)
+        build_and_verify(tmpdir)
+    else:
+        log.info(
+            "Temporary outfolder removed at end of test. "
+            "Use environment TEST_OUTFOLDER to specify a permanent one."
+        )
+        with tempfile.TemporaryDirectory() as tmpdir:
+            build_and_verify(tmpdir)

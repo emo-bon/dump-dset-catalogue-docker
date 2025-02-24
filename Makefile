@@ -24,9 +24,9 @@ help:  ## [help] Shows this list of available targets and their effect.
 	@echo "initializing the python environment for the project"
 	@test -d .venv || python -m venv .venv
 	@if [ -f .venv/bin/activate ]; then \
-		. .venv/bin/activate && pip install -Ur requirements-dev.txt && pip install -Ur requirements.txt; \
+		. .venv/bin/activate && pip install -Ur requirements-dev.txt && pip install -Ur requirements.txt --force-reinstall; \
 	elif [ -f .venv/Scripts/activate ]; then \
-		. .venv/Scripts/activate && pip install -Ur requirements-dev.txt && pip install -Ur requirements.txt; \
+		.venv/Scripts/activate && pip install -Ur requirements-dev.txt && pip install -Ur requirements.txt --force-reinstall; \
 	fi
 	@touch .venv/touchfile
 
@@ -39,7 +39,7 @@ check: ## [  py] Checks the code for linting and formatting issues
 		if [ -f .venv/bin/activate ]; then \
 			. .venv/bin/activate && flake8 . --exclude ${FLAKE8_EXCLUDE} --ignore=E203,W503 && echo "done."; \
 		elif [ -f .venv/Scripts/activate ]; then \
-			. .venv/Scripts/activate && flake8 . --exclude ${FLAKE8_EXCLUDE} --ignore=E203,W503 && echo "done."; \
+			.venv/Scripts/activate && flake8 . --exclude ${FLAKE8_EXCLUDE} --ignore=E203,W503 && echo "done."; \
 		fi \
 	) || : 
 	@test -d .venv || echo "no .venv directory found, run 'make init' to initialize the python environment"
@@ -50,7 +50,7 @@ lint-fix: ## [  py] Fixes the code for linting and formatting issues
 		if [ -f .venv/bin/activate ]; then \
 			. .venv/bin/activate && black --line-length 80 . && isort .; \
 		elif [ -f .venv/Scripts/activate ]; then \
-			. .venv/Scripts/activate && black --line-length 80 . && isort .; \
+			.venv/Scripts/activate && black --line-length 80 . && isort .; \
 		fi \
 	) || :
 	@test -d .venv || echo "no .venv directory found, run 'make init' to initialize the python environment"
@@ -61,7 +61,7 @@ test: ## [  py] Runs the tests for the project
 		if [ -f .venv/bin/activate ]; then \
 			. .venv/bin/activate && pytest tests/; \
 		elif [ -f .venv/Scripts/activate ]; then \
-			. .venv/Scripts/activate && pytest tests/; \
+			.venv/Scripts/activate && pytest tests/; \
 		fi \
 	) || :
 	@test -d .venv || echo "no .venv directory found, run 'make init' to initialize the python environment"

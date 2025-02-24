@@ -1,66 +1,70 @@
 #!/usr/bin/env python3
-import logging
 from logging import Logger, getLogger
+from pathlib import Path
 
 from rdflib import Graph
 from rdflib.query import Result
+from sema.commons.glob import getMatchingGlobPaths
 from sema.harvest import Harvest
-import os
-
-
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-)
-
 
 log: Logger = getLogger(__name__)
 
 
+def log_directory_contents(path: Path):
+    contents = getMatchingGlobPaths(path, ["*"])
+    if path.exists():
+        log.info(f"Contents of {path !s}")
+        for content in contents:
+            log.info(
+                f"[{'file' if content.is_file() else ' dir'}] {content !s}"
+            )
+    else:
+        log.info(f"{path !s} does not exist")
+
+
 def _main(
-    config: str = "/ddcat/data/dereference_task_emobon_config.yml",
-    resultsroot: str = "resultsroot",
+    *,
+    config: str = "/ddcat/config/harvest-emobon-dcat.yml",
+    resultsroot: str = "/resultsroot",
 ) -> None:
+    """Testable version of `main()` allows to pass named arguments
+    rather then just take defaults for them."""
+
+    cwd = Path(".").absolute()
+    log.info(f"Current working directory: {cwd !s}")
+    log_directory_contents(cwd)
+
+    resultsroot = Path(resultsroot).absolute()
+    log_directory_contents(resultsroot)
+
+    output_file: Path = resultsroot / "emobon-dcat-dump.ttl"
+    if output_file.exists():
+        log.warning("output-file already exists -- will remove it")
+        output_file.unlink()
+
+    config = Path(config).absolute()
+    log.info(f"Using config file: {config !s}")
+
     log.info("Starting harvesting")
-    cwd = os.getcwd()
-    log.info(f"Current working directory: {cwd}")
-    log.info(f"Contents of the current working directory: {os.listdir(cwd)}")
-
-    # Check if resultsroot and ddcat folders exist and log their contents recursively
-    def log_directory_contents(path: str, folder_name: str):
-        if os.path.exists(path):
-            log.info(f"{folder_name} directory exists: {path}")
-            for root, dirs, files in os.walk(path):
-                log.info(f"Directory: {root}")
-                for name in files:
-                    log.info(f"File: {os.path.join(root, name)}")
-                for name in dirs:
-                    log.info(f"Sub-directory: {os.path.join(root, name)}")
-        else:
-            log.info(f"{folder_name} directory does not exist: {path}")
-
-    log_directory_contents(resultsroot, "resultsroot")
-    log.debug(f"{config=}")
-    log.debug(f"{resultsroot=}")
     harvester = Harvest(config, [])
     harvester.process()
+    log.info("Harvesting complete")
+
     harvester_result: Result = harvester.target_store.all_triples()
     log.debug(f"{harvester_result=}")
     # the harvester_result should be a list of ResultRow objects
-    save_graph = Graph()
+    dump_graph = Graph()
     for row in harvester_result:
-        save_graph.add(row)
+        dump_graph.add(row)
 
     # log the length of the graph
-    log.info(f"Graph length: {len(save_graph)}")
+    log.info(f"Graph length: {len(dump_graph)}")
 
-    output_file = f"{resultsroot}/results.ttl"
-
-    with open(output_file, "w") as f:
-        f.write(
-            save_graph.serialize(format="turtle", encoding="utf-8").decode("utf-8")
-        )  # noqa: E501
-    log.info(f"Results saved to {output_file}")
-    log.info("Harvesting complete")
+    if len(dump_graph):
+        dump_graph.serialize(destination=str(output_file), format="turtle")
+        log.info(f"Results saved to {output_file}")
+    else:
+        log.info("No results to write.")
 
 
 def main():
