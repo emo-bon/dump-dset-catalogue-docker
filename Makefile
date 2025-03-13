@@ -22,7 +22,9 @@ help:  ## [help] Shows this list of available targets and their effect.
 # +---
 .venv/touchfile: requirements.txt requirements-dev.txt
 	@echo "initializing the python environment for the project"
-	@test -d .venv || python -m venv .venv
+	@test -d .venv || (echo "no .venv directory found, run 'make init' to initialize the python environment"; exit 1)
+	@. .venv/bin/activate; \
+	flake8 .  --exclude ${FLAKE8_EXCLUDE} --ignore=E203,W503
 	@if [ -f .venv/bin/activate ]; then \
 		. .venv/bin/activate && pip install -Ur requirements-dev.txt && pip install -Ur requirements.txt --force-reinstall; \
 	elif [ -f .venv/Scripts/activate ]; then \
@@ -46,6 +48,16 @@ check: ## [  py] Checks the code for linting and formatting issues
 
 lint-fix: ## [  py] Fixes the code for linting and formatting issues
 	@echo "fixing the code for linting and formatting issues"
+        @test -d .venv || (echo "no .venv directory found, run 'make init' to initialize the python environment"; exit 1)
+
+
+	@. .venv/bin/activate; \
+
+
+	  black --line-length 80 .; \
+
+
+	  isort .;
 	@test -d .venv && ( \
 		if [ -f .venv/bin/activate ]; then \
 			. .venv/bin/activate && black --line-length 80 . && isort .; \
@@ -57,6 +69,7 @@ lint-fix: ## [  py] Fixes the code for linting and formatting issues
 
 test: ## [  py] Runs the tests for the project
 	@echo "running the tests for the project"
+@test -d .venv || (echo "no .venv directory found, run 'make init' to initialize the python environment"; exit 1)
 	@test -d .venv && ( \
 		if [ -f .venv/bin/activate ]; then \
 			. .venv/bin/activate && pytest tests/; \
