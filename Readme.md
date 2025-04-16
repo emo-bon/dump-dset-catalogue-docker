@@ -36,7 +36,7 @@ $ out="./path_to/where/the_dump_result/should_be_written"
 $ out="."
 
 # actually run it
-$ docker run --rm --name "emo-bon_ddcat" --volume ${out}:/resultsroot ghcr.io/emo-bon/emobon_dcdat:${version}
+$ docker run --rm --name "emo-bon_ddcat" --volume ${out}:/resultsroot ghcr.io/emo-bon/emobon_ddcat:${version}
 ```
 
 ## Developer info
