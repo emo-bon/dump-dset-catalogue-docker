@@ -39,6 +39,12 @@ $ out="."
 $ docker run --rm --name "emo-bon_ddcat" --volume ${out}:/resultsroot ghcr.io/emo-bon/emobon_ddcat:${version}
 ```
 
+for windows users with bash shell, the above command should be run as:
+
+```sh
+$ docker run --rm --name "emo-bon_ddcat" --volume /$PWD/${out}:/resultsroot ghcr.io/emo-bon/emobon_ddcat:${version}"
+```
+
 ## Developer info
 
 To build your own local image, or to get involved in furthering this work:
