@@ -48,7 +48,7 @@ check: ## [  py] Checks the code for linting and formatting issues
 
 lint-fix: ## [  py] Fixes the code for linting and formatting issues
 	@echo "fixing the code for linting and formatting issues"
-        @test -d .venv || (echo "no .venv directory found, run 'make init' to initialize the python environment"; exit 1)
+ @test -d .venv || (echo "no .venv directory found, run 'make init' to initialize the python environment"; exit 1)
 
 
 	@. .venv/bin/activate; \
