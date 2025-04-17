@@ -12,6 +12,16 @@ assert:
         - https://data.emobon.embrc.eu
     paths:
       - "*"
+  - subjects: # get the data from all Catalogs , first the catalogs since they can contain more datasets
+      SPARQL: >
+        SELECT DISTINCT ?o
+        WHERE { 
+          {?s dcat:catalog ?o . }
+          UNION
+          {?s a dcat:Catalog . }
+        }
+    paths:
+      - "*"
   - subjects: # get the data from all Datasets
       SPARQL: >
         SELECT DISTINCT ?o
