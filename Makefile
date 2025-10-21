@@ -31,41 +31,22 @@ init: .venv/touchfile ## [  py] Initializes the python environment for the proje
 
 check: ## [  py] Checks the code for linting and formatting issues
 	@echo "checking the code for linting and formatting issues"
-	@test -d .venv && ( \
-		if [ -f .venv/bin/activate ]; then \
-			. .venv/bin/activate && flake8 . --exclude ${FLAKE8_EXCLUDE} --ignore=E203,W503 && echo "done."; \
-		elif [ -f .venv/Scripts/activate ]; then \
-			.venv/Scripts/activate && flake8 . --exclude ${FLAKE8_EXCLUDE} --ignore=E203,W503 && echo "done."; \
-		fi \
-	) || : 
-	@test -d .venv || echo "no .venv directory found, run 'make init' to initialize the python environment"
+	@test -d .venv || (echo "no .venv directory found, run 'make init' to initialize the python environment"; exit 1)
+	@. .venv/bin/activate; \
+	  flake8 .  --exclude ${FLAKE8_EXCLUDE} --ignore=E203,W503
 
 lint-fix: ## [  py] Fixes the code for linting and formatting issues
 	@echo "fixing the code for linting and formatting issues"
 	@test -d .venv || (echo "no .venv directory found, run 'make init' to initialize the python environment"; exit 1)
 	@. .venv/bin/activate; \
 	  black --line-length 80 .; \
-	  isort .;
-	@test -d .venv && ( \
-		if [ -f .venv/bin/activate ]; then \
-			. .venv/bin/activate && black --line-length 80 . && isort .; \
-		elif [ -f .venv/Scripts/activate ]; then \
-			.venv/Scripts/activate && black --line-length 80 . && isort .; \
-		fi \
-	) || :
-	@test -d .venv || echo "no .venv directory found, run 'make init' to initialize the python environment"
+	  isort .
 
 test: ## [  py] Runs the tests for the project
 	@echo "running the tests for the project"
 	@test -d .venv || (echo "no .venv directory found, run 'make init' to initialize the python environment"; exit 1)
-	@test -d .venv && ( \
-		if [ -f .venv/bin/activate ]; then \
-			. .venv/bin/activate && pytest tests/; \
-		elif [ -f .venv/Scripts/activate ]; then \
-			.venv/Scripts/activate && pytest tests/; \
-		fi \
-	) || :
-	@test -d .venv || echo "no .venv directory found, run 'make init' to initialize the python environment"
+	@. .venv/bin/activate; \
+	  pytest tests/
 
 clean: ## [  py] Cleans the python environment for the project
 	@echo "cleaning the python environment for the project"
