@@ -172,3 +172,4 @@ cython_debug/
 
 .env
 docker-clean.sh
+public/

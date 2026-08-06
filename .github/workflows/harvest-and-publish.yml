@@ -1,0 +1,69 @@
+name: Harvest & Publish Catalogues to GitHub Pages
+
+on:
+  schedule:
+    # Run every Sunday at 00:00 UTC
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+# Allow one concurrent deployment
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  harvest-and-publish:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout codebase
+        uses: actions/checkout@v4
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create output directory
+        run: mkdir -p public
+
+      - name: Pull and run Harvester Docker Container
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}/public:/resultsroot \
+            ghcr.io/emo-bon/emobon_ddcat:latest
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies for SPARQL transformation
+        run: |
+          python -m pip install --upgrade pip
+          pip install rdflib
+
+      - name: Execute SPARQL transformations & Generate Index HTML
+        run: |
+          python scripts/transform_catalogs.py \
+            --dump public/emobon-dcat-dump.ttl \
+            --queries queries/ \
+            --output public/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './public'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

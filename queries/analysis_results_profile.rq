@@ -1,0 +1,21 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX schema: <https://schema.org/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+CONSTRUCT {
+  <https://data.emobon.embrc.eu/#catalog-analysis_results_profile> a dcat:Catalog ;
+      dcterms:title "Catalog of all Analysis Results Datasets in EMO BON"@en ;
+      dcat:dataset ?dataset .
+      
+  ?dataset ?p ?o .
+}
+WHERE {
+  ?catalog a dcat:Catalog .
+  ?catalog dcat:dataset ?dataset .
+  ?metadata schema:about ?dataset .
+  ?metadata dcterms:conformsTo ?profile .
+  ?dataset ?p ?o .
+  
+  # Matches URIs containing "analysis-results-profile"
+  FILTER(CONTAINS(STR(?profile), "analysis-results-profile"))
+}
